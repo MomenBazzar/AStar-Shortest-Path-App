@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#CircleClicked" prefHeight="625.5" prefWidth="1460.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.Controller">
+   <children>
+      <ImageView fitHeight="625.5" fitWidth="1168.0">
+         <Image url="@RamallahMap.png" />
+      </ImageView>
+      <Button layoutX="1226.0" layoutY="5.0" mnemonicParsing="false" onAction="#readFiles" prefHeight="26.0" prefWidth="176.0" style="-fx-border-width: 1 4 4 1; -fx-border-color: #94753d;" text="Read Data From Files" textFill="#94753d" />
+      <HBox layoutX="1226.0" layoutY="100.0" prefHeight="26.0" prefWidth="176.0" style="-fx-border-color: #94753d; -fx-border-width: 1 4 4 1;">
+         <children>
+            <Label text="Distance: " textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="distance" minWidth="-Infinity" prefHeight="20.0" prefWidth="87.0" style="-fx-alignment: center;" text="0.0" textFill="#94753d" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="km" textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="runButton" disable="true" layoutX="1226.0" layoutY="50.0" mnemonicParsing="false" onAction="#run" prefHeight="26.0" prefWidth="176.0" style="-fx-border-width: 1 4 4 1; -fx-border-color: #94753d;" text="Run Algorithm" textFill="#94753d" />
+      <VBox fx:id="pathVBox" layoutX="1226.0" layoutY="150.0" prefHeight="300.0" prefWidth="176.0" style="-fx-border-color: #94753d; -fx-border-width: 1 4 4 1;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="176.0" style="-fx-alignment: center;" text="Path: " textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Line endX="69.29281616210938" startX="-100.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="1226.0" layoutY="470.0" prefHeight="54.0" prefWidth="176.0" style="-fx-border-color: #94753d; -fx-border-width: 1 4 4 1;">
+         <children>
+            <Label prefHeight="24.0" prefWidth="171.0" style="-fx-alignment: center;" text="Time Complexity" textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeComp" prefHeight="24.0" prefWidth="171.0" style="-fx-alignment: center;" text="00" textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="1226.0" layoutY="540.0" prefHeight="54.0" prefWidth="176.0" style="-fx-border-color: #94753d; -fx-border-width: 1 4 4 1;">
+         <children>
+            <Label prefHeight="24.0" prefWidth="171.0" style="-fx-alignment: center;" text="Space Complexity" textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="spaceComp" prefHeight="24.0" prefWidth="171.0" style="-fx-alignment: center;" text="00" textFill="#94753d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
